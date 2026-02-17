@@ -13,9 +13,23 @@ th,td{
     list-style: none;
     padding: 0;
 }
-.success{
-    color: green;
+
+p.success{
+    color: white !important;
+    background-color: green !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+    margin-bottom: 15px !important;
+    font-weight: bold !important;
+    display: block !important;
 }
-.error{
-    color: red;
+
+p.error{
+    color: white !important;
+    background-color: red !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+    margin-bottom: 15px !important;
+    font-weight: bold !important;
+    display: block !important;
 }

@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib import messages
 
 from .models import Note
@@ -22,7 +22,13 @@ def add_note(request):
 
     else:
         form = NoteForm()
-    form = NoteForm
     return render(request, "notes/add.html", {
         "form": form
     })
+
+
+def delete_note(request, note_id):
+    note = get_object_or_404(Note, id=note_id)
+    note.delete()
+    messages.success(request, 'Note deleted successfully.')
+    return redirect('notes:index')
