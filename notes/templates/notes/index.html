@@ -1,0 +1,21 @@
+{% extends "notes/base.html" %}
+{% block content %}
+    <h3>Notes list</h3>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+        {% for n in notes %}
+            <tr>
+                <td>{{ n.title }}</td>
+                <td>{{ n.description }}</td>
+                <td>
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}
